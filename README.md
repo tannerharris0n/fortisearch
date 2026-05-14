@@ -30,11 +30,11 @@ It's built for the field practitioner conversation: "what firmware are we on for
 
 ## Screenshots
 
-> _placeholder: screenshots go here once the site is live_
+<img width="1285" height="696" alt="Screenshot 2026-05-14 at 11 16 44 AM" src="https://github.com/user-attachments/assets/5d55785f-af34-4a3b-856d-d87bce171e3f" />
 
-- `screenshots/landing.png` — search + category rail + result grid
-- `screenshots/detail.png` — slide-over with firmware versions and doc links
-- `screenshots/mobile.png` — single-column view at 375px wide
+<img width="1347" height="696" alt="Screenshot 2026-05-14 at 11 16 55 AM" src="https://github.com/user-attachments/assets/e7b82baa-626e-492d-86cd-990959667974" />
+
+<img width="1347" height="696" alt="Screenshot 2026-05-14 at 11 17 24 AM" src="https://github.com/user-attachments/assets/e6b5fe16-bd29-49f8-abf8-b7fcf364df21" />
 
 ## Data coverage
 
