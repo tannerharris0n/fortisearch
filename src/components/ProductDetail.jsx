@@ -94,10 +94,10 @@ function PlatformChip({ label, href }) {
   );
 }
 
-function DeployInstallSection({ vmGuides, cloudHubs }) {
+function DeployInstallSection({ vmGuides, cloudHubs, installGuide }) {
   const guideEntries = vmGuides ? Object.entries(vmGuides) : [];
   const hubEntries = cloudHubs ? Object.entries(cloudHubs) : [];
-  if (!guideEntries.length && !hubEntries.length) return null;
+  if (!guideEntries.length && !hubEntries.length && !installGuide) return null;
 
   const grouped = { public: [], private: [], other: [] };
   for (const [platform, href] of guideEntries) {
@@ -170,6 +170,15 @@ function DeployInstallSection({ vmGuides, cloudHubs }) {
               href={href}
             />
           ))}
+        </div>
+      )}
+
+      {installGuide && (
+        <div className={`${showPublic || showPrivate || showOther ? 'mt-3' : ''}`}>
+          <div className="text-[10.5px] font-mono uppercase tracking-wider text-inkFaint mb-1.5">
+            Install / Deployment Guide
+          </div>
+          <LinkRow label="Installation & deployment guide" href={installGuide} />
         </div>
       )}
 
@@ -334,6 +343,7 @@ export default function ProductDetail({ product, onClose }) {
           <DeployInstallSection
             vmGuides={product.links?.vmGuides}
             cloudHubs={product.links?.cloudHubs}
+            installGuide={product.links?.installGuide}
           />
 
           <Section title="Download &amp; Support">

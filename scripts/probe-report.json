@@ -1,0 +1,337 @@
+{
+  "fortinac-f": {
+    "slug": "fortinac-f",
+    "docs": [
+      {
+        "docSlug": "fortinac-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/fortinac-deployment-guide"
+      },
+      {
+        "docSlug": "vm-deployment-guides",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/vm-deployment-guides"
+      },
+      {
+        "docSlug": "persistent-agent-deployment-and-configuration",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/persistent-agent-deployment-and-configuration"
+      },
+      {
+        "docSlug": "captive-portal-azure-ad",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/captive-portal-azure-ad"
+      },
+      {
+        "docSlug": "extremecloud-iq-controller-wireless-integration",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/extremecloud-iq-controller-wireless-integration"
+      },
+      {
+        "docSlug": "airgap-deployment-guide",
+        "ver": "7.6.2",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.2/airgap-deployment-guide"
+      },
+      {
+        "docSlug": "ruckus-r1-cloud-integration",
+        "ver": "7.6.3",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.3/ruckus-r1-cloud-integration"
+      },
+      {
+        "docSlug": "itsm-cookbook",
+        "ver": "7.6.5",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.5/itsm-cookbook"
+      },
+      {
+        "docSlug": "iot-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/iot-deployment-guide"
+      },
+      {
+        "docSlug": "microsoft-entra-id-authentication-cookbook",
+        "ver": "7.6.5",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.5/microsoft-entra-id-authentication-cookbook"
+      },
+      {
+        "docSlug": "installing-ssl-certificates",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/installing-ssl-certificates"
+      },
+      {
+        "docSlug": "generic-radius-wired-cookbook",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/generic-radius-wired-cookbook"
+      },
+      {
+        "docSlug": "alibaba-cloud",
+        "ver": "7.6.5",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.5/alibaba-cloud"
+      },
+      {
+        "docSlug": "google-cloud-platform-vm-deployment-guide",
+        "ver": "7.6.3",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.3/google-cloud-platform-vm-deployment-guide"
+      },
+      {
+        "docSlug": "oracle-public-cloud-oci-deployment-guide",
+        "ver": "7.6.3",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.3/oracle-public-cloud-oci-deployment-guide"
+      },
+      {
+        "docSlug": "kvm-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/kvm-deployment-guide"
+      },
+      {
+        "docSlug": "aws-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/aws-deployment-guide"
+      },
+      {
+        "docSlug": "nutanix-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/nutanix-deployment-guide"
+      },
+      {
+        "docSlug": "azure-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/azure-deployment-guide"
+      },
+      {
+        "docSlug": "hyper-v-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/hyper-v-deployment-guide"
+      },
+      {
+        "docSlug": "vmware-deployment-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/vmware-deployment-guide"
+      },
+      {
+        "docSlug": "appliance-installation-guide",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/appliance-installation-guide"
+      },
+      {
+        "docSlug": "fortiedge-cloud-integration",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/fortiedge-cloud-integration"
+      },
+      {
+        "docSlug": "extremecloud-aerohive-wireless-integration",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/extremecloud-aerohive-wireless-integration"
+      },
+      {
+        "docSlug": "arista-cloud-wireless-integration",
+        "ver": "7.6.0",
+        "url": "https://docs.fortinet.com/document/fortinac-f/7.6.0/arista-cloud-wireless-integration"
+      }
+    ]
+  },
+  "fortinac": {
+    "slug": "fortinac",
+    "docs": [
+      {
+        "docSlug": "hardware-and-vm-install-guides",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/hardware-and-vm-install-guides"
+      },
+      {
+        "docSlug": "deployment-guide",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/deployment-guide"
+      },
+      {
+        "docSlug": "captive-portal-azure-ad-authentication",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/captive-portal-azure-ad-authentication"
+      },
+      {
+        "docSlug": "persistent-agent-deployment-and-configuration",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/persistent-agent-deployment-and-configuration"
+      },
+      {
+        "docSlug": "installing-ssl-certificates",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/installing-ssl-certificates"
+      },
+      {
+        "docSlug": "extremecloud-aerohive-wireless-integration",
+        "ver": "9.4.0",
+        "url": "https://docs.fortinet.com/document/fortinac/9.4.0/extremecloud-aerohive-wireless-integration"
+      }
+    ]
+  },
+  "fortipresence": {
+    "slug": "fortipresence",
+    "docs": [
+      {
+        "docSlug": "fortipresence-cloud-administration-guide",
+        "ver": "26.1.0",
+        "url": "https://docs.fortinet.com/document/fortipresence/26.1.0/fortipresence-cloud-administration-guide"
+      },
+      {
+        "docSlug": "social-network-authentication",
+        "ver": "26.1.0",
+        "url": "https://docs.fortinet.com/document/fortipresence/26.1.0/social-network-authentication"
+      },
+      {
+        "docSlug": "fortipresence-cloud-release-notes",
+        "ver": "26.1.0",
+        "url": "https://docs.fortinet.com/document/fortipresence/26.1.0/fortipresence-cloud-release-notes"
+      }
+    ]
+  },
+  "fortivoice": {
+    "slug": "fortivoice-enterprise",
+    "docs": [
+      {
+        "docSlug": "fortivoice-cookbook",
+        "ver": "7.4.1",
+        "url": "https://docs.fortinet.com/document/fortivoice-enterprise/7.4.1/fortivoice-cookbook"
+      },
+      {
+        "docSlug": "fortivoice-fxo-gateway-deployment-guide",
+        "ver": "7.4.1",
+        "url": "https://docs.fortinet.com/document/fortivoice-enterprise/7.4.1/fortivoice-fxo-gateway-deployment-guide"
+      },
+      {
+        "docSlug": "fortivoice-fxs-gateway-deployment-guide",
+        "ver": "7.4.1",
+        "url": "https://docs.fortinet.com/document/fortivoice-enterprise/7.4.1/fortivoice-fxs-gateway-deployment-guide"
+      },
+      {
+        "docSlug": "fortivoice-local-survivable-gateway-deployment-guide",
+        "ver": "7.4.1",
+        "url": "https://docs.fortinet.com/document/fortivoice-enterprise/7.4.1/fortivoice-local-survivable-gateway-deployment-guide"
+      },
+      {
+        "docSlug": "fortivoice-pri-gateway-deployment-guide",
+        "ver": "7.4.1",
+        "url": "https://docs.fortinet.com/document/fortivoice-enterprise/7.4.1/fortivoice-pri-gateway-deployment-guide"
+      }
+    ]
+  },
+  "fortisiem": {
+    "slug": "fortisiem",
+    "docs": [
+      {
+        "docSlug": "offline-installation-and-upgrade-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/offline-installation-and-upgrade-guide"
+      },
+      {
+        "docSlug": "disk-encryption-for-fortisiem-virtual-machine",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/disk-encryption-for-fortisiem-virtual-machine"
+      },
+      {
+        "docSlug": "esx-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/esx-installation-guide"
+      },
+      {
+        "docSlug": "aws-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/aws-installation-guide"
+      },
+      {
+        "docSlug": "windows-agent-7-5-x-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/windows-agent-7-5-x-installation-guide"
+      },
+      {
+        "docSlug": "linux-agent-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/linux-agent-installation-guide"
+      },
+      {
+        "docSlug": "azure-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/azure-installation-guide"
+      },
+      {
+        "docSlug": "google-cloud-platform-gcp-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/google-cloud-platform-gcp-installation-guide"
+      },
+      {
+        "docSlug": "kvm-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/kvm-installation-guide"
+      },
+      {
+        "docSlug": "hyper-v-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/hyper-v-installation-guide"
+      },
+      {
+        "docSlug": "nutanix-ahv-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/nutanix-ahv-installation-guide"
+      },
+      {
+        "docSlug": "oracle-cloud-infrastructure-oci-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/oracle-cloud-infrastructure-oci-installation-guide"
+      },
+      {
+        "docSlug": "proxmox-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/proxmox-installation-guide"
+      },
+      {
+        "docSlug": "installing-on-rhel-9-6-for-fips-140-3-crypto-module-support",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/installing-on-rhel-9-6-for-fips-140-3-crypto-module-support"
+      },
+      {
+        "docSlug": "diode-collector-installation-guide",
+        "ver": "7.5.1",
+        "url": "https://docs.fortinet.com/document/fortisiem/7.5.1/diode-collector-installation-guide"
+      }
+    ]
+  },
+  "fortisoar": {
+    "slug": "fortisoar",
+    "docs": [
+      {
+        "docSlug": "deployment-guide",
+        "ver": "7.6.6",
+        "url": "https://docs.fortinet.com/document/fortisoar/7.6.6/deployment-guide"
+      },
+      {
+        "docSlug": "fortisoar-cloud-paas",
+        "ver": "7.6.5",
+        "url": "https://docs.fortinet.com/document/fortisoar/7.6.5/fortisoar-cloud-paas"
+      }
+    ]
+  },
+  "fortiinsight": {
+    "slug": "fortiinsight",
+    "docs": [
+      {
+        "docSlug": "vm-installation-guide",
+        "ver": "7.0.0",
+        "url": "https://docs.fortinet.com/document/fortiinsight/7.0.0/vm-installation-guide"
+      },
+      {
+        "docSlug": "aws-installation-guide",
+        "ver": "7.0.0",
+        "url": "https://docs.fortinet.com/document/fortiinsight/7.0.0/aws-installation-guide"
+      }
+    ]
+  },
+  "fortipolicy": {
+    "slug": "fortipolicy",
+    "docs": [
+      {
+        "docSlug": "installing-fortipolicy-for-vmware",
+        "ver": "7.2.2",
+        "url": "https://docs.fortinet.com/document/fortipolicy/7.2.2/installing-fortipolicy-for-vmware"
+      }
+    ]
+  }
+}

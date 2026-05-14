@@ -799,7 +799,19 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "vmGuides": {
+          "azure": "https://docs.fortinet.com/document/fortinac-f/7.6.0/azure-deployment-guide",
+          "alicloud": "https://docs.fortinet.com/document/fortinac-f/7.6.5/alibaba-cloud",
+          "gcp": "https://docs.fortinet.com/document/fortinac-f/7.6.3/google-cloud-platform-vm-deployment-guide",
+          "oci": "https://docs.fortinet.com/document/fortinac-f/7.6.3/oracle-public-cloud-oci-deployment-guide",
+          "kvm": "https://docs.fortinet.com/document/fortinac-f/7.6.0/kvm-deployment-guide",
+          "aws": "https://docs.fortinet.com/document/fortinac-f/7.6.0/aws-deployment-guide",
+          "nutanix": "https://docs.fortinet.com/document/fortinac-f/7.6.0/nutanix-deployment-guide",
+          "microsoft-hyper-v": "https://docs.fortinet.com/document/fortinac-f/7.6.0/hyper-v-deployment-guide",
+          "vmware-esxi": "https://docs.fortinet.com/document/fortinac-f/7.6.0/vmware-deployment-guide"
+        },
+        "installGuide": "https://docs.fortinet.com/document/fortinac-f/7.6.0/appliance-installation-guide"
       }
     },
     {
@@ -839,7 +851,11 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "vmGuides": {
+          "azure": "https://docs.fortinet.com/document/fortinac/9.4.0/captive-portal-azure-ad-authentication"
+        },
+        "installGuide": "https://docs.fortinet.com/document/fortinac/9.4.0/hardware-and-vm-install-guides"
       }
     },
     {
@@ -2224,7 +2240,19 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "vmGuides": {
+          "vmware-esxi": "https://docs.fortinet.com/document/fortisiem/7.5.1/esx-installation-guide",
+          "aws": "https://docs.fortinet.com/document/fortisiem/7.5.1/aws-installation-guide",
+          "azure": "https://docs.fortinet.com/document/fortisiem/7.5.1/azure-installation-guide",
+          "gcp": "https://docs.fortinet.com/document/fortisiem/7.5.1/google-cloud-platform-gcp-installation-guide",
+          "kvm": "https://docs.fortinet.com/document/fortisiem/7.5.1/kvm-installation-guide",
+          "microsoft-hyper-v": "https://docs.fortinet.com/document/fortisiem/7.5.1/hyper-v-installation-guide",
+          "nutanix": "https://docs.fortinet.com/document/fortisiem/7.5.1/nutanix-ahv-installation-guide",
+          "oci": "https://docs.fortinet.com/document/fortisiem/7.5.1/oracle-cloud-infrastructure-oci-installation-guide",
+          "proxmox": "https://docs.fortinet.com/document/fortisiem/7.5.1/proxmox-installation-guide"
+        },
+        "installGuide": "https://docs.fortinet.com/document/fortisiem/7.5.1/offline-installation-and-upgrade-guide"
       }
     },
     {
@@ -2268,7 +2296,8 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "installGuide": "https://docs.fortinet.com/document/fortisoar/7.6.6/deployment-guide"
       }
     },
     {
@@ -2455,7 +2484,11 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "vmGuides": {
+          "aws": "https://docs.fortinet.com/document/fortiinsight/7.0.0/aws-installation-guide"
+        },
+        "installGuide": "https://docs.fortinet.com/document/fortiinsight/7.0.0/vm-installation-guide"
       }
     },
     {
@@ -3129,7 +3162,10 @@
         "datasheet": null,
         "firmwareDownload": "https://support.fortinet.com/Download/FirmwareImages.aspx",
         "cookbookSearch": "https://docs.fortinet.com/fortinet-cookbook",
-        "architectureDocs": "https://docs.fortinet.com/4d-resources"
+        "architectureDocs": "https://docs.fortinet.com/4d-resources",
+        "vmGuides": {
+          "vmware-esxi": "https://docs.fortinet.com/document/fortipolicy/7.2.2/installing-fortipolicy-for-vmware"
+        }
       }
     },
     {
