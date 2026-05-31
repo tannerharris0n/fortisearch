@@ -25,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Use BOT_PAT (a repo-admin PAT, which bypasses the branch ruleset)
+          # when present; otherwise fall back to GITHUB_TOKEN, which only works
+          # if "GitHub Actions" is on the ruleset's bypass list.
+          token: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -44,19 +49,16 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit directly
-        if: steps.diff.outputs.changed == 'true' && (github.event_name == 'schedule' || github.event.inputs.mode == 'direct')
-        run: |
-          git config user.name "fortisearch-bot"
-          git config user.email "fortisearch-bot@users.noreply.github.com"
-          git add src/data/products.json
-          git commit -m "chore: firmware data update $(date -u +%Y-%m-%d)"
-          git push
-
+      # main is protected by a ruleset requiring all changes go through a PR,
+      # so the bot can no longer push directly. Every run opens (or updates) a
+      # PR instead. Scheduled runs (and `mode: direct`) then enable auto-merge
+      # so the data still lands hands-off; `mode: pr` leaves it for review.
       - name: Open pull request
-        if: steps.diff.outputs.changed == 'true' && github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'pr'
+        id: cpr
+        if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
           commit-message: "chore: firmware data update $(date -u +%Y-%m-%d)"
           title: "chore: firmware data update"
           body: |
@@ -66,3 +68,18 @@ jobs:
           branch: bot/firmware-update
           base: main
           delete-branch: true
+
+      - name: Enable auto-merge
+        if: >-
+          steps.cpr.outputs.pull-request-number != '' &&
+          (github.event_name == 'schedule' || github.event.inputs.mode == 'direct')
+        env:
+          GH_TOKEN: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          # Prefer auto-merge (waits for any required checks); fall back to an
+          # immediate merge if the repo's "Allow auto-merge" setting is off.
+          # Either way the token must be able to bypass the branch ruleset
+          # (BOT_PAT as admin, or GITHUB_TOKEN added to the bypass list).
+          gh pr merge "$PR" --squash --auto --delete-branch \
+            || gh pr merge "$PR" --squash --delete-branch
