@@ -25,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Use BOT_PAT (a repo-admin PAT, which bypasses the branch ruleset)
+          # when present; otherwise fall back to GITHUB_TOKEN, which only works
+          # if "GitHub Actions" is on the ruleset's bypass list.
+          token: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -53,6 +58,7 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
           commit-message: "chore: firmware data update $(date -u +%Y-%m-%d)"
           title: "chore: firmware data update"
           body: |
@@ -68,10 +74,12 @@ jobs:
           steps.cpr.outputs.pull-request-number != '' &&
           (github.event_name == 'schedule' || github.event.inputs.mode == 'direct')
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
           PR: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
           # Prefer auto-merge (waits for any required checks); fall back to an
           # immediate merge if the repo's "Allow auto-merge" setting is off.
+          # Either way the token must be able to bypass the branch ruleset
+          # (BOT_PAT as admin, or GITHUB_TOKEN added to the bypass list).
           gh pr merge "$PR" --squash --auto --delete-branch \
             || gh pr merge "$PR" --squash --delete-branch
