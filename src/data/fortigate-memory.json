@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "lastResearched": "2026-06-01",
+    "note": "Fortinet does not publish system RAM in datasheets or Hardware QuickStart Guides. Hardware figures below are OS-reported memory (get hardware status) captured on shipping units, primarily via yurisk.info and the Fortinet community forum. Values with confidence below 'high' are shown with a ~ and should be verified against the unit's own 'get hardware status'.",
+    "sources": [
+      { "label": "yurisk.info FortiGate hardware table", "url": "https://yurisk.info/2021/03/14/Fortigate-Firewalls-Hardware-CPU-model-and-number-Memory-size-datasheet-table/" },
+      { "label": "Fortinet community — FortiGate 6000F series RAM", "url": "https://community.fortinet.com/t5/FortiGate/Technical-Tip-Information-on-FortiGate-6000F-series-Gen1-and/ta-p/191608" },
+      { "label": "FortiGate-VM Administration Guide — licenses & resources", "url": "https://docs.fortinet.com/document/fortigate-private-cloud/7.6.0/kvm-administration-guide/367417/fortigate-vm-virtual-licenses-and-resources" }
+    ]
+  },
+  "groups": [
+    {
+      "label": "FortiGate hardware appliances",
+      "note": "Installed physical RAM. Sourced from OS-reported memory on shipping units; Fortinet does not publish appliance RAM.",
+      "models": [
+        { "model": "FortiGate 30G", "ramGB": 2, "confidence": "high" },
+        { "model": "FortiGate 40F", "ramGB": 2, "confidence": "high" },
+        { "model": "FortiGate 50G", "ramGB": 2, "confidence": "high" },
+        { "model": "FortiGate 60F", "ramGB": 2, "confidence": "high" },
+        { "model": "FortiGate 70F", "ramGB": 4, "confidence": "high" },
+        { "model": "FortiGate 70G", "ramGB": 4, "confidence": "medium" },
+        { "model": "FortiGate 80F", "ramGB": 4, "confidence": "high" },
+        { "model": "FortiGate 90G", "ramGB": 8, "confidence": "medium" },
+        { "model": "FortiGate 100F", "ramGB": 4, "confidence": "medium", "note": "Hardware revision-dependent: rev 1 = 4 GB, rev 2 = 8 GB." },
+        { "model": "FortiGate 120G", "ramGB": 8, "confidence": "medium", "note": "Revision-dependent (~8 GB common)." },
+        { "model": "FortiGate 200F", "ramGB": 8, "confidence": "high" },
+        { "model": "FortiGate 200G", "ramGB": 24, "confidence": "medium", "note": "Single public source." },
+        { "model": "FortiGate 400F", "ramGB": 16, "confidence": "high" },
+        { "model": "FortiGate 400G", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 600F", "ramGB": 16, "confidence": "high" },
+        { "model": "FortiGate 700G", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 900G", "ramGB": 32, "confidence": "high" },
+        { "model": "FortiGate 1000F", "ramGB": 16, "confidence": "high" },
+        { "model": "FortiGate 1800F", "ramGB": 24, "confidence": "high" },
+        { "model": "FortiGate 2600F", "ramGB": 48, "confidence": "high" },
+        { "model": "FortiGate 3000F", "ramGB": 128, "confidence": "high" },
+        { "model": "FortiGate 3000G", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 3200F", "ramGB": 128, "confidence": "high" },
+        { "model": "FortiGate 3500F", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 3500G", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 3700F", "ramGB": 256, "confidence": "high" },
+        { "model": "FortiGate 3800G", "ramGB": null, "confidence": "low" },
+        { "model": "FortiGate 4200F", "ramGB": 384, "confidence": "high" },
+        { "model": "FortiGate 4400F", "ramGB": 384, "confidence": "medium", "note": "Inferred from the 4401F DC variant (same hardware)." },
+        { "model": "FortiGate 4800F", "ramGB": 512, "confidence": "high" },
+        { "model": "FortiGate 6001F", "ramGB": 32, "confidence": "medium", "note": "Per FPC (Gen1 32 GB / Gen2 64 GB); system total scales with active FPCs." },
+        { "model": "FortiGate 6300F", "ramGB": 32, "confidence": "medium", "note": "Per FPC (Gen1 32 GB / Gen2 64 GB); 6 FPCs." },
+        { "model": "FortiGate 6500F", "ramGB": 32, "confidence": "medium", "note": "Per FPC (Gen1 32 GB / Gen2 64 GB); 10 FPCs." },
+        { "model": "FortiGate 7081F", "ramGB": null, "confidence": "low", "note": "Chassis — RAM is per FPM-7620F processor module; not publicly published." },
+        { "model": "FortiGate 7121F", "ramGB": null, "confidence": "low", "note": "Chassis — RAM is per FPM-7620F processor module; not publicly published." }
+      ]
+    },
+    {
+      "label": "FortiGate-VM license tiers",
+      "note": "FortiOS 6.2.2+ removed RAM caps from VM licenses — tiers are defined by vCPU only. Fortinet recommends at least 4 GB for proper operation (more with UTM/ZTNA/proxy). The historical pre-6.2.2 maximums are shown for reference and no longer apply.",
+      "models": [
+        { "model": "FG-VM01 (1 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 2 GB. 4 GB recommended minimum." },
+        { "model": "FG-VM02 (2 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 4 GB." },
+        { "model": "FG-VM04 (4 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 6 GB." },
+        { "model": "FG-VM08 (8 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 12 GB." },
+        { "model": "FG-VM16 (16 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 24 GB." },
+        { "model": "FG-VM32 (32 vCPU)", "ramGB": null, "confidence": "high", "note": "No RAM cap (current FortiOS). Historical max 48 GB." },
+        { "model": "FG-VMUL (unlimited vCPU)", "ramGB": null, "confidence": "high", "note": "No vCPU or RAM cap." }
+      ]
+    }
+  ]
+}

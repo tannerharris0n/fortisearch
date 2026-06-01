@@ -1,19 +1,26 @@
 import { useMemo, useState } from 'react';
 import data from './data/products.json';
+import referenceCards from './data/reference-cards.js';
 import useProductSearch from './hooks/useProductSearch.js';
 import Nav from './components/Nav.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import CategoryFilter from './components/CategoryFilter.jsx';
 import ProductCard from './components/ProductCard.jsx';
+import ReferenceCard from './components/ReferenceCard.jsx';
 import ProductDetail from './components/ProductDetail.jsx';
+import MemoryReference from './components/MemoryReference.jsx';
 import FreshnessIndicator from './components/FreshnessIndicator.jsx';
 
 export default function App() {
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
-  const [openProduct, setOpenProduct] = useState(null);
+  const [openItem, setOpenItem] = useState(null);
 
   const { products, uiCategories, meta } = data;
+
+  // Reference cards (e.g. the Memory/RAM table) are searchable alongside products
+  // but render as a distinct card and open a reference panel instead of a product.
+  const searchPool = useMemo(() => [...referenceCards, ...products], [products]);
 
   const productsByCategory = useMemo(() => {
     const map = { All: products };
@@ -25,7 +32,8 @@ export default function App() {
     return map;
   }, [products]);
 
-  const filtered = useProductSearch(products, query, activeCategory);
+  const filtered = useProductSearch(searchPool, query, activeCategory);
+  const productResultCount = filtered.filter((x) => x.kind !== 'reference').length;
 
   return (
     <div className="min-h-screen flex flex-col bg-bg">
@@ -47,7 +55,7 @@ export default function App() {
             <SearchBar
               value={query}
               onChange={setQuery}
-              resultCount={filtered.length}
+              resultCount={productResultCount}
               totalCount={products.length}
             />
             <div className="lg:hidden">
@@ -118,9 +126,13 @@ export default function App() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-3">
-                {filtered.map((p) => (
-                  <ProductCard key={p.id} product={p} onOpen={setOpenProduct} />
-                ))}
+                {filtered.map((item) =>
+                  item.kind === 'reference' ? (
+                    <ReferenceCard key={item.id} card={item} onOpen={setOpenItem} />
+                  ) : (
+                    <ProductCard key={item.id} product={item} onOpen={setOpenItem} />
+                  )
+                )}
               </div>
             )}
           </section>
@@ -129,7 +141,11 @@ export default function App() {
 
       <FreshnessIndicator meta={meta} />
 
-      <ProductDetail product={openProduct} onClose={() => setOpenProduct(null)} />
+      {openItem?.kind === 'reference' ? (
+        <MemoryReference card={openItem} onClose={() => setOpenItem(null)} />
+      ) : (
+        <ProductDetail product={openItem} onClose={() => setOpenItem(null)} />
+      )}
     </div>
   );
 }
